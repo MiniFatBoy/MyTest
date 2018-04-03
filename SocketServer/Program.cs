@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.IO;
-using LogHelper;
+using DevelopHelpers;
 
 namespace SocketServer
 {
@@ -43,8 +40,8 @@ namespace SocketServer
             }
             catch (Exception ex ) 
             {
-               string ss = LogHelper.LogerHelper.GetMethodInfo();
-                LogerHelper.WriteLog(ex, "", ss);
+               string ss = LogerHelper.GetMethodInfo();
+               LogerHelper.WriteLog(ex, "", ss);
             }
             
            

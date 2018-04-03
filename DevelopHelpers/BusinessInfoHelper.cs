@@ -4,19 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using TestModel;
 
-namespace QueueTest
+namespace DevelopHelpers
 {
-
-    public class QueueInfo
-    {
-        public string name { get; set; }
-
-        public string password { get; set; }
-    }
-
     public delegate void ScanQueuedlgt();
-   public class BusinessInfoHelper
+
+    /// <summary>
+    /// 队列帮助类
+    /// </summary>
+    public class BusinessInfoHelper
     {
         public ScanQueuedlgt ScanQueue;
 
@@ -54,7 +51,7 @@ namespace QueueTest
         {
             while (true)
             {
-                if (listQueue.Count!=0)
+                if (listQueue.Count != 0)
                 {
                     try
                     {
@@ -78,7 +75,7 @@ namespace QueueTest
         /// </summary>
         private void ScanQueue1()
         {
-            while (listQueue.Count>0)
+            while (listQueue.Count > 0)
             {
                 try
                 {
@@ -86,7 +83,7 @@ namespace QueueTest
                     QueueInfo info = listQueue.Dequeue();
 
                     ///取出来后要加入的代码
-                    Console.WriteLine("账户名："+info.name+" 密码："+info.password);
+                    Console.WriteLine("账户名：" + info.name + " 密码：" + info.password);
                 }
                 catch (Exception)
                 {

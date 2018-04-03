@@ -8,16 +8,19 @@ using System.Text;
 
 namespace DevelopHelpers
 {
+
+    /// <summary>
+    /// 日志帮助类
+    /// </summary>
     public static class LogerHelper
     {
-
         /// <summary>
         /// 将异常打印到LOG文件
         /// </summary>
         /// <param name="ex">异常</param>
         /// <param name="LogAddress">日志文件地址</param>
         /// <param name="Ex_MetchodName">引发异常的方法名称</param>
-        public static void WriteLog(Exception ex, string LogAddress,string Ex_MetchodName)
+        public static void WriteLog(Exception ex, string LogAddress, string Ex_MetchodName)
         {
             //如果日志文件路径LogAddress为空，则默认在Debug目录下新建 YYYY-mm-dd-Log.log文件
             if (LogAddress == "")
@@ -56,7 +59,7 @@ namespace DevelopHelpers
             select p).FirstOrDefault();
             var classname = method.DeclaringType.Name;//所在的类；
             var namespeacename = method.DeclaringType.Namespace;//所在的程序集；
-            string funname= property == null ? method.Name : property.Name;
+            string funname = property == null ? method.Name : property.Name;
             return "命名空间：" + namespeacename + "；  所在的类：" + classname + "；   方法名称：" + funname;
         }
 

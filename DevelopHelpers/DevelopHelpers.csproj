@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AA148FD8-26FA-4AE7-906F-F1F08344913B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{3CC9F080-2F47-41B6-8E32-23B4BF102E3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QueueTest</RootNamespace>
-    <AssemblyName>QueueTest</AssemblyName>
+    <RootNamespace>DevelopHelpers</RootNamespace>
+    <AssemblyName>DevelopHelpers</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -44,17 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessInfoHelper.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="LogerHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializationHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SerializationHelper\SerializationHelper.csproj">
-      <Project>{e4ca55c6-a499-4be6-8d7d-ca0f255c917b}</Project>
-      <Name>SerializationHelper</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TestModel\TestModel.csproj">
       <Project>{e3ac841a-8d7c-4fdd-b079-83a7ae421b72}</Project>
       <Name>TestModel</Name>
