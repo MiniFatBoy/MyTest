@@ -10,6 +10,8 @@ namespace QueueTest
     {
         static void Main(string[] args)
         {
+            string path = @"F:\Project\MyTest\MyTest\OutputTest\bin\Debug\Test.xml";
+            string bnpath = @"F:\Project\MyTest\MyTest\OutputTest\bin\Debug\bnTest.txt";
             ///启动队列
             BusinessInfoHelper.Instance.start(StartThread);
             BusinessInfoHelper.Instance.AddQueue("胡大帅3", "666666676666");
@@ -25,10 +27,18 @@ namespace QueueTest
             List<SerializationModel> nmodellist = new List<SerializationModel>();
             foreach (var item in modellist)
             {
-                nmodellist.Add(SerializationHelper.DeepClone(item));
+                nmodellist.Add(BinarySerializationHelper.DeepClone(item));
             }
             modellist[1].name = "hu";
-            SerializationModel model = SerializationHelper.DeepClone(new SerializationModel() { name="just fly",passWord="flyboy"});
+            SerializationModel model = BinarySerializationHelper.DeepClone(new SerializationModel() { name="just fly",passWord="flyboy"});
+
+            XmlSerializationHelper.SerializeToXml<List<SerializationModel>>(modellist,path);
+            var li= XmlSerializationHelper.DeSerializeToXml<List<SerializationModel>>(path);
+            var ss = XmlSerializationHelper.SerializeToXml<List<SerializationModel>>(modellist);
+            var sss = XmlSerializationHelper.DeSerializeToXml<List<SerializationModel>>(ss,false);
+            
+            var bt = BinarySerializationHelper.SerializeToByte(modellist);
+            BinarySerializationHelper.SerializeToByte(modellist,bnpath);
             Console.Read();
         }
 

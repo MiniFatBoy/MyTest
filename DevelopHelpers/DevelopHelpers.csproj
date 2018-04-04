@@ -40,13 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySerializationHelper.cs" />
     <Compile Include="BusinessInfoHelper.cs" />
     <Compile Include="LibraryWrapper.cs" />
     <Compile Include="LogerHelper.cs" />
     <Compile Include="ObjectComparer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SafeLibraryHandle.cs" />
-    <Compile Include="SerializationHelper.cs" />
+    <Compile Include="XmlSerializationHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestModel\TestModel.csproj">
