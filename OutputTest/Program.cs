@@ -12,6 +12,7 @@ namespace QueueTest
         {
             string path = @"F:\Project\MyTest\MyTest\OutputTest\bin\Debug\Test.xml";
             string bnpath = @"F:\Project\MyTest\MyTest\OutputTest\bin\Debug\bnTest.txt";
+            string jpath = @"F:\Project\MyTest\MyTest\OutputTest\bin\Debug\jTest.txt";
             ///启动队列
             BusinessInfoHelper.Instance.start(StartThread);
             BusinessInfoHelper.Instance.AddQueue("胡大帅3", "666666676666");
@@ -33,12 +34,18 @@ namespace QueueTest
             SerializationModel model = BinarySerializationHelper.DeepClone(new SerializationModel() { name="just fly",passWord="flyboy"});
 
             XmlSerializationHelper.SerializeToXml<List<SerializationModel>>(modellist,path);
-            var li= XmlSerializationHelper.DeSerializeToXml<List<SerializationModel>>(path);
+            var li= XmlSerializationHelper.DeSerializeFromXml<List<SerializationModel>>(path , true);
             var ss = XmlSerializationHelper.SerializeToXml<List<SerializationModel>>(modellist);
-            var sss = XmlSerializationHelper.DeSerializeToXml<List<SerializationModel>>(ss,false);
+            var sss = XmlSerializationHelper.DeSerializeFromXml<List<SerializationModel>>(ss);
             
-            var bt = BinarySerializationHelper.SerializeToByte(modellist);
-            BinarySerializationHelper.SerializeToByte(modellist,bnpath);
+            var bt = BinarySerializationHelper.FormatterObjectBytes(modellist);
+            BinarySerializationHelper.BinaryFileSave(bnpath, modellist);
+
+            var json = JsonSerializationHelper.SerializeToJson(modellist);
+            JsonSerializationHelper.SerializeToJson(modellist, jpath);
+
+            var dejson = JsonSerializationHelper.DeSerializeFromJson<List<SerializationModel>>(json);
+            var pdejson = JsonSerializationHelper.DeSerializeFromJson<List<SerializationModel>>(jpath,true);
             Console.Read();
         }
 

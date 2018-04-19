@@ -21,15 +21,16 @@ namespace DevelopHelpers
         /// <typeparam name="T">序列化的类型</typeparam>
         /// <param name="obj">序列化对象</param>
         /// <param name="path">路径</param>
-        public static void SerializeToXml<T>(T obj, string path)
+        public static bool SerializeToXml<T>(T obj, string path)
         {
+            bool result = false;
             StreamWriter writer = null;
             try
             {
                 writer = new StreamWriter(path, false, UTF8Encoding.UTF8);
                 XmlSerializer xs = new XmlSerializer(typeof(T));
                 xs.Serialize(writer, obj);
-              
+                result = true;
             }
             catch (Exception ex)
             {
@@ -39,6 +40,7 @@ namespace DevelopHelpers
             {
                 writer.Close();
             }
+            return result;
         }
         /// <summary>
         /// 序列化为XML文本
@@ -57,7 +59,6 @@ namespace DevelopHelpers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
@@ -72,9 +73,9 @@ namespace DevelopHelpers
         /// </summary>
         /// <typeparam name="T">返回值类型</typeparam>
         /// <param name="data">xml文件路径或者xml文本</param>
-        /// <param name="isPath">是否是路径</param>
+        /// <param name="isPath">是否为路径</param>
         /// <returns></returns>
-        public static T DeSerializeToXml<T>(string data, bool isPath = true)
+        public static T DeSerializeFromXml<T>(string data, bool isPath = false)
         {
             T result = default(T);
             if (isPath)
