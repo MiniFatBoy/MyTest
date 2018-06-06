@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputTest", "OutputTest\Ou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{40E620EA-0BB0-4213-A709-A17C93ADCD42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPrismDome", "MyPrismDome\MyPrismDome.csproj", "{7B5341A0-DBB5-49F7-AD14-DB2661F6A349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPrismDomeView", "MyPrismDomeView\MyPrismDomeView.csproj", "{57E92FF9-55A4-4D6C-AD7F-8C4ECE59D35D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{AA148FD8-26FA-4AE7-906F-F1F08344913B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA148FD8-26FA-4AE7-906F-F1F08344913B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA148FD8-26FA-4AE7-906F-F1F08344913B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5341A0-DBB5-49F7-AD14-DB2661F6A349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5341A0-DBB5-49F7-AD14-DB2661F6A349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5341A0-DBB5-49F7-AD14-DB2661F6A349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5341A0-DBB5-49F7-AD14-DB2661F6A349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E92FF9-55A4-4D6C-AD7F-8C4ECE59D35D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E92FF9-55A4-4D6C-AD7F-8C4ECE59D35D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E92FF9-55A4-4D6C-AD7F-8C4ECE59D35D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E92FF9-55A4-4D6C-AD7F-8C4ECE59D35D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
