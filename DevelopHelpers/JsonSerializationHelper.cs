@@ -8,6 +8,9 @@ using System.IO;
 
 namespace DevelopHelpers
 {
+    /// <summary>
+    /// Json序列化帮助类
+    /// </summary>
     public  class JsonSerializationHelper
     {
         /// <summary>
