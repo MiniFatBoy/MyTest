@@ -5,12 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyPrismDomeView.View"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="4*"></RowDefinition>
-        </Grid.RowDefinitions>
-         
+             d:DesignHeight="80" d:DesignWidth="400">
+    <Grid Background="AliceBlue">
+        <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
+            <TextBlock TextAlignment="Center" TextBlock.FontSize="20"> 这是我的导航</TextBlock>
+        </StackPanel>
     </Grid>
 </UserControl>

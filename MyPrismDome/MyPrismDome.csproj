@@ -127,6 +127,12 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyPrismDomeView\MyPrismDomeView.csproj">
+      <Project>{57e92ff9-55a4-4d6c-ad7f-8c4ece59d35d}</Project>
+      <Name>MyPrismDomeView</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
