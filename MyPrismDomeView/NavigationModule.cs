@@ -10,14 +10,23 @@ namespace MyPrismDomeView
 {
     public class NavigationModule : IModule
     {
-        private IRegionManager _regionmodule;
-        public NavigationModule(IRegionManager module)
+        //private IRegionManager _regionmodule;
+        //public NavigationModule(IRegionManager module)
+        //{
+        //    this._regionmodule = module;
+        //}
+        //public void Initialize()
+        //{
+        //    _regionmodule.RegisterViewWithRegion("navigationCotrol", typeof(View.Navigation));
+        //}
+
+        public NavigationModule()
         {
-            this._regionmodule = module;
+
         }
         public void Initialize()
         {
-            _regionmodule.RegisterViewWithRegion("navigationCotrol", typeof(View.Navigation));
+            
         }
     }
 }

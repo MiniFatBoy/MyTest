@@ -6,6 +6,7 @@ using System.Windows;
 using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Prism.Modularity;
+using System.Reflection;
 
 namespace MyPrismDome
 {
@@ -33,9 +34,19 @@ namespace MyPrismDome
         protected override void ConfigureModuleCatalog()
         {
             base.ConfigureModuleCatalog();
-            ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
 
-            moduleCatalog.AddModule(typeof(MyPrismDomeView.NavigationModule));
+            string programName = Assembly.GetExecutingAssembly().ManifestModule.Name;
+            if (programName.EndsWith(".exe", StringComparison.CurrentCultureIgnoreCase))
+            {
+                programName = programName.Substring(0, programName.Length - 4);
+            }
+
+            this.ModuleCatalog = Microsoft.Practices.Prism.Modularity.ModuleCatalog.CreateFromXaml
+                (new Uri(string.Format("{0};component/ModuleConfig.xaml", programName), UriKind.Relative));
+
+            //ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+
+            //moduleCatalog.AddModule(typeof(MyPrismDomeView.NavigationModule));
 
         }
     }

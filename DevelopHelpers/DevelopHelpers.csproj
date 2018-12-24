@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArraySortHelper.cs" />
     <Compile Include="BinarySerializationHelper.cs" />
     <Compile Include="BusinessInfoHelper.cs" />
     <Compile Include="JsonSerializationHelper.cs" />

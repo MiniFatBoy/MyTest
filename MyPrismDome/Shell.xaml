@@ -15,7 +15,14 @@
         <Grid>
             <ItemsControl Name="navigationCotrol" prism:RegionManager.RegionName="navigationCotrol"></ItemsControl>
         </Grid>
-        <Grid  Grid.Row="1"></Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <ItemsControl Name="menuControl" prism:RegionManager.RegionName="menuControl"></ItemsControl>
+            <ContentControl></ContentControl>
+        </Grid>
     </Grid>
   
 </Window>

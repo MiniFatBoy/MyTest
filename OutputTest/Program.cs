@@ -13,6 +13,14 @@ namespace QueueTest
             string path = @"F:\Project\MyTest\MyTest\OutputTest\bin\Debug\Test.xml";
             string bnpath = @"F:\Project\MyTest\MyTest\OutputTest\bin\Debug\bnTest.txt";
             string jpath = @"F:\Project\MyTest\MyTest\OutputTest\bin\Debug\jTest.txt";
+            double[] data = new double[] {10.2,15.3,4,51.2,5,4,0,-5.3,5,8};
+            List<int> list = new List<int> { 6, 2, 48, 8, 6, 7, 4, };
+            data.BubbleSort();
+            list.InsertSort();
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
             ///启动队列
             BusinessInfoHelper.Instance.start(StartThread);
             BusinessInfoHelper.Instance.AddQueue("胡大帅3", "666666676666");
