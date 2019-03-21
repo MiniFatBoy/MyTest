@@ -41,12 +41,12 @@ namespace MyPrismDome
                 programName = programName.Substring(0, programName.Length - 4);
             }
 
-            this.ModuleCatalog = Microsoft.Practices.Prism.Modularity.ModuleCatalog.CreateFromXaml
-                (new Uri(string.Format("{0};component/ModuleConfig.xaml", programName), UriKind.Relative));
+            //this.ModuleCatalog = Microsoft.Practices.Prism.Modularity.ModuleCatalog.CreateFromXaml
+            //    (new Uri(string.Format("{0};component/ModuleConfig.xaml", programName), UriKind.Relative));
 
-            //ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+            ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
 
-            //moduleCatalog.AddModule(typeof(MyPrismDomeView.NavigationModule));
+            moduleCatalog.AddModule(typeof(MyPrismDomeView.NavigationModule));
 
         }
     }
