@@ -3,7 +3,7 @@
                     xmlns:prism="clr-namespace:Microsoft.Practices.Prism.Modularity;assembly=Microsoft.Practices.Prism"
                     xmlns:local="clr-namespace:MyPrismDome">
     <prism:ModuleInfoGroup InitializationMode="WhenAvailable">
-        <prism:ModuleInfo ModuleName="MyPrismDomeView" ModuleType="MyPrismDomeView.View,View"/>
+        <prism:ModuleInfo ModuleName="MyPrismDomeView" ModuleType="MyPrismDomeView.NavigationModule,MyPrismDomeView"/>
         <!--<prism:ModuleInfo ModuleName="menuControl" ModuleType="MyPrismDomeView.View,View.Menu"/>-->
     </prism:ModuleInfoGroup>
     

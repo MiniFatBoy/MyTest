@@ -48,6 +48,7 @@
     <Compile Include="ArraySortHelper.cs" />
     <Compile Include="BinarySerializationHelper.cs" />
     <Compile Include="BusinessInfoHelper.cs" />
+    <Compile Include="ConvertHelpers.cs" />
     <Compile Include="JsonSerializationHelper.cs" />
     <Compile Include="LibraryWrapper.cs" />
     <Compile Include="LogerHelper.cs" />

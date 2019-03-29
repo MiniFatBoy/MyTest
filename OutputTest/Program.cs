@@ -21,6 +21,11 @@ namespace QueueTest
             {
                 Console.WriteLine(item);
             }
+
+            People p = new People();
+            p.Name = "李静";
+            p.Sex = "女";
+            var t =  ConvertHelpers.CreateInstanceByBase<Teacher,People>(p);
             ///启动队列
             BusinessInfoHelper.Instance.start(StartThread);
             BusinessInfoHelper.Instance.AddQueue("胡大帅3", "666666676666");
