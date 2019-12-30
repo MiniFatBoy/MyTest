@@ -42,7 +42,7 @@ namespace MyPrismDome
                 programName = programName.Substring(0, programName.Length - 4);
             }
             this.ModuleCatalog = Microsoft.Practices.Prism.Modularity.ModuleCatalog.CreateFromXaml(
-                new Uri(string.Format("{ModuleConfig.xaml", programName), UriKind.Relative));
+                new Uri(string.Format("{0};component/ModuleConfig.xaml", programName), UriKind.Relative));
 
             //FileStream stream = new FileStream(@"F:\Project\MyTest\MyTest\MyPrismDome\ModuleConfig.xaml",FileMode.Open);
             //this.ModuleCatalog = Microsoft.Practices.Prism.Modularity.ModuleCatalog.CreateFromXaml(stream);
